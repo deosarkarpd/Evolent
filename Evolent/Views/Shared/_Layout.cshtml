@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - Evolent Customer Information System</title>
+	<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="~/Scripts/modernizr-2.6.2.js"></script>
+	<style type="text/css">
+		body {
+			font-family: Arial;
+			font-size: 10pt;
+		}
+
+		.table {
+			border: 1px solid #ccc;
+			border-collapse: collapse;
+		}
+
+			.table th {
+				background-color: #F7F7F7;
+				color: #333;
+				font-weight: bold;
+			}
+
+			.table th, .table td {
+				padding: 5px;
+				border: 1px solid #ccc;
+			}
+
+		.arrow-up {
+			width: 0px;
+			height: 0px;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 10px solid black;
+		}
+
+		.arrow-down {
+			width: 0px;
+			height: 0px;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 10px solid black;
+		}
+	</style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Evolent Customer Information System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<div class="container body-content">
+		<div style="height:450px;">
+			@RenderBody()
+			</div>
+			<footer style="margin-top:200px;">
+				<hr />
+
+				<p>&copy; @DateTime.Now.Year - Evolent Customer Information System</p>
+			</footer>
+		</div>
+
+		<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+		<script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
